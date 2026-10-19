@@ -2,7 +2,13 @@ import { projectsData } from '../../../data/projects'
 import { ProjectCard } from '../../molecules/ProjectCard/ProjectCard'
 
 export function FeaturedProjects({ viewAllHref = null }) {
-  const isTwoProjects = projectsData.length === 2
+  const projectCount = projectsData.length
+  const gridClasses =
+    projectCount === 1
+      ? 'grid grid-cols-1 max-w-[480px] mx-auto gap-6'
+      : projectCount === 2
+        ? 'grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-[960px] mx-auto'
+        : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'
 
   return (
     <section
@@ -30,13 +36,7 @@ export function FeaturedProjects({ viewAllHref = null }) {
         )}
       </div>
 
-      <div
-        className={
-          isTwoProjects
-            ? 'grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-[960px] mx-auto'
-            : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'
-        }
-      >
+      <div className={gridClasses}>
         {projectsData.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

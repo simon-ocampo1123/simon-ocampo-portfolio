@@ -28,10 +28,10 @@ export function ProjectCard({ project, index = 0 }) {
     technologies = [],
     liveUrl,
     repositoryUrl,
+    availability,
   } = project
 
   const variation = CARD_VARIATIONS[index % CARD_VARIATIONS.length] || CARD_VARIATIONS[0]
-  const isColsubsidio = id.includes('colsubsidio')
 
   return (
     <div className="relative group/card h-full pr-2.5 pb-2.5">
@@ -55,7 +55,7 @@ export function ProjectCard({ project, index = 0 }) {
                 <Globe className="w-5 h-5 text-slate-400" aria-hidden="true" />
               </div>
               <span className="text-xs font-medium text-slate-400 tracking-wide">
-                {isColsubsidio ? 'Colsubsidio' : title}
+                {availability || title}
               </span>
             </div>
           )}
@@ -89,7 +89,7 @@ export function ProjectCard({ project, index = 0 }) {
             </ul>
           )}
 
-          {(liveUrl || repositoryUrl) && (
+          {(liveUrl || repositoryUrl || availability) && (
             <div className="pt-2 flex items-center gap-4 flex-wrap">
               {liveUrl && (
                 <a
@@ -122,6 +122,13 @@ export function ProjectCard({ project, index = 0 }) {
                     aria-hidden="true"
                   />
                 </a>
+              )}
+
+              {!liveUrl && !repositoryUrl && availability && (
+                <span className="inline-flex items-center gap-1.5 text-xs text-slate-400 font-medium select-none">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80" aria-hidden="true" />
+                  <span>{availability}</span>
+                </span>
               )}
             </div>
           )}
