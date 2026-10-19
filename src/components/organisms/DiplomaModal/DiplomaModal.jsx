@@ -158,12 +158,34 @@ export function DiplomaModal({
                   transition: 'transform 0.15s ease-out',
                 }}
               >
-                <iframe
-                  src={`${pdfUrl}#toolbar=0&navpanes=0&view=Fit`}
-                  title={`${title} - Simón Ocampo`}
+                <object
+                  data={`${pdfUrl}#toolbar=0&navpanes=0&view=Fit`}
+                  type="application/pdf"
                   className="w-full h-full border-0 bg-white"
-                  loading="eager"
-                />
+                  aria-label={`${title} - Simón Ocampo`}
+                >
+                  <iframe
+                    src={`${pdfUrl}#toolbar=0&navpanes=0&view=Fit`}
+                    title={`${title} - Simón Ocampo`}
+                    className="w-full h-full border-0 bg-white"
+                    loading="eager"
+                  >
+                    <div className="flex flex-col items-center justify-center h-full p-6 text-center text-slate-800 bg-slate-100">
+                      <p className="font-semibold text-sm mb-2 text-slate-900">
+                        Tu navegador no soporta la previsualización directa de este archivo.
+                      </p>
+                      <a
+                        href={pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-blue-600 text-white rounded-lg text-xs font-semibold hover:bg-blue-700 transition-colors inline-flex items-center gap-1.5"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>Abrir diploma en pestaña nueva</span>
+                      </a>
+                    </div>
+                  </iframe>
+                </object>
               </div>
             </div>
 
