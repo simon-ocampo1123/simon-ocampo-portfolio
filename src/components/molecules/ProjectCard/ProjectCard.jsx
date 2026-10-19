@@ -1,4 +1,5 @@
 import { ArrowUpRight, Globe } from 'lucide-react'
+import { Icon } from '../../atoms/Icon/Icon'
 
 const CARD_VARIATIONS = [
   {
@@ -11,7 +12,13 @@ const CARD_VARIATIONS = [
     offset: 'translate-x-[5px] translate-y-[2px]',
     hoverOffset: 'group-hover/card:translate-x-[6px] group-hover/card:translate-y-[2px]',
   },
+  {
+    rotate: 'rotate-[0.6deg]',
+    offset: 'translate-x-[6px] translate-y-[2.5px]',
+    hoverOffset: 'group-hover/card:translate-x-[7px] group-hover/card:translate-y-[2.5px]',
+  },
 ]
+
 export function ProjectCard({ project, index = 0 }) {
   const {
     id,
@@ -20,6 +27,7 @@ export function ProjectCard({ project, index = 0 }) {
     image,
     technologies = [],
     liveUrl,
+    repositoryUrl,
   } = project
 
   const variation = CARD_VARIATIONS[index % CARD_VARIATIONS.length] || CARD_VARIATIONS[0]
@@ -47,7 +55,7 @@ export function ProjectCard({ project, index = 0 }) {
                 <Globe className="w-5 h-5 text-slate-400" aria-hidden="true" />
               </div>
               <span className="text-xs font-medium text-slate-400 tracking-wide">
-                {isColsubsidio ? 'Colsubsidio' : 'Salud Colsubsidio'}
+                {isColsubsidio ? 'Colsubsidio' : title}
               </span>
             </div>
           )}
@@ -81,21 +89,40 @@ export function ProjectCard({ project, index = 0 }) {
             </ul>
           )}
 
-          {liveUrl && (
-            <div className="pt-2">
-              <a
-                href={liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Visitar sitio web en producción del proyecto ${title} (se abre en nueva pestaña)`}
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-sky-400 hover:text-sky-300 transition-colors focus-visible:outline-none focus-visible:underline"
-              >
-                <span>Ver proyecto</span>
-                <ArrowUpRight
-                  className="w-4 h-4 transition-transform duration-150 group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5"
-                  aria-hidden="true"
-                />
-              </a>
+          {(liveUrl || repositoryUrl) && (
+            <div className="pt-2 flex items-center gap-4 flex-wrap">
+              {liveUrl && (
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visitar sitio web en producción del proyecto ${title} (se abre en nueva pestaña)`}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-sky-400 hover:text-sky-300 transition-colors focus-visible:outline-none focus-visible:underline"
+                >
+                  <span>Ver proyecto</span>
+                  <ArrowUpRight
+                    className="w-4 h-4 transition-transform duration-150 group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                </a>
+              )}
+
+              {repositoryUrl && (
+                <a
+                  href={repositoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ver código fuente del proyecto ${title} en GitHub (se abre en nueva pestaña)`}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-300 hover:text-sky-300 transition-colors focus-visible:outline-none focus-visible:underline"
+                >
+                  <Icon name="Github" size={16} aria-hidden="true" />
+                  <span>Ver código</span>
+                  <ArrowUpRight
+                    className="w-3.5 h-3.5 opacity-70 transition-transform duration-150 group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                </a>
+              )}
             </div>
           )}
         </div>

@@ -1,5 +1,6 @@
 import colsubsidioImage from '../assets/images/colsubsidio.png'
 import georreferenciacionImage from '../assets/images/georreferenciacion.png'
+import portfolioImage from '../assets/images/portfolio.png'
 
 export const projectsData = [
   {
@@ -35,5 +36,18 @@ export const projectsData = [
     availability: 'Portal Salud Colsubsidio',
     contribution:
       'Desarrollo del componente interactivo de consulta georreferenciada con filtrado dinámico y consumo de endpoints JSON:API.',
+  },
+  {
+    id: 'portafolio-web-personal',
+    title: 'Portafolio Web Personal',
+    description:
+      'Sitio web interactivo desarrollado con arquitectura modular, diseño accesible, animaciones fluidas y optimización para rendimiento y dispositivos móviles.',
+    image: portfolioImage,
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Motion', 'Accesibilidad web'],
+    liveUrl: null,
+    repositoryUrl: 'https://github.com/simon-ocampo1123/simon-ocampo-portfolio',
+    availability: 'Código abierto',
+    contribution:
+      'Diseño e implementación integral de la interfaz, arquitectura de componentes, scroll spy y adaptación responsive completa.',
   },
 ]
