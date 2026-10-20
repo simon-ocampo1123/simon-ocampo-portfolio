@@ -36,7 +36,7 @@ export function HeroContent() {
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto mb-6">
         <a
           href={heroData.actions.primary.href}
-          aria-label="Ir a la sección de proyectos destacados de Simón Ocampo"
+          aria-label="Ir a la sección de proyectos destacados de Simon Ocampo"
           className="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-[12px] bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-[15px] font-semibold shadow-[0_0_20px_rgba(37,99,235,0.35)] hover:shadow-[0_0_25px_rgba(37,99,235,0.55)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070A11]"
         >
           <span>{heroData.actions.primary.text}</span>
@@ -57,8 +57,8 @@ export function HeroContent() {
         {socialLinks.map((social) => {
           const isEmail = social.name.toLowerCase() === 'email'
           const label = isEmail
-            ? 'Enviar correo electrónico a Simón Ocampo'
-            : `Visitar perfil de Simón Ocampo en ${social.name} (se abre en nueva pestaña)`
+            ? 'Enviar correo electrónico a Simon Ocampo'
+            : `Visitar perfil de Simon Ocampo en ${social.name} (se abre en nueva pestaña)`
 
           return (
             <a

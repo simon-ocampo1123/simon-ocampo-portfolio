@@ -162,11 +162,11 @@ export function DiplomaModal({
                   data={`${pdfUrl}#toolbar=0&navpanes=0&view=Fit`}
                   type="application/pdf"
                   className="w-full h-full border-0 bg-white"
-                  aria-label={`${title} - Simón Ocampo`}
+                  aria-label={`${title} - Simon Ocampo`}
                 >
                   <iframe
                     src={`${pdfUrl}#toolbar=0&navpanes=0&view=Fit`}
-                    title={`${title} - Simón Ocampo`}
+                    title={`${title} - Simon Ocampo`}
                     className="w-full h-full border-0 bg-white"
                     loading="eager"
                   >

@@ -198,13 +198,13 @@ export function Navbar() {
           href="#inicio"
           onClick={() => handleNavClick('#inicio')}
           className="flex items-center gap-2.5 group select-none shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1"
-          aria-label="Ir al inicio - Simón Ocampo"
+          aria-label="Ir al inicio - Simon Ocampo"
         >
           <span className="text-xl sm:text-2xl font-bold text-[#38BDF8] tracking-tight group-hover:brightness-125 transition-all">
             SO
           </span>
           <span className="text-sm sm:text-base font-semibold text-white tracking-tight truncate max-w-[150px] xs:max-w-[220px] sm:max-w-none">
-            Simón Ocampo
+            Simon Ocampo
           </span>
         </a>
 
@@ -221,8 +221,8 @@ export function Navbar() {
                   href={item.href}
                   onClick={() => handleNavClick(item.href)}
                   className={`relative px-3.5 py-1.5 text-xs xl:text-sm transition-all duration-200 select-none tracking-normal rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${isCurrent
-                      ? 'text-[#38BDF8] font-medium'
-                      : 'text-[#94A3B8] hover:text-white font-normal'
+                    ? 'text-[#38BDF8] font-medium'
+                    : 'text-[#94A3B8] hover:text-white font-normal'
                     }`}
                 >
                   {isCurrent && (
@@ -252,7 +252,7 @@ export function Navbar() {
             download={cvDownloadConfig.downloadFileName || 'CV-Simon-Ocampo.pdf'}
             target={cvDownloadConfig.target}
             rel="noopener noreferrer"
-            aria-label="Descargar currículum vitae de Simón Ocampo en formato PDF"
+            aria-label="Descargar currículum vitae de Simon Ocampo en formato PDF"
             className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0B132B]/85 border-[1.5px] border-[#38BDF8]/60 text-white text-xs sm:text-sm font-semibold tracking-normal shadow-[0_0_14px_rgba(56,189,248,0.25)] hover:border-[#38BDF8] hover:shadow-[0_0_20px_rgba(56,189,248,0.45)] hover:bg-[#0E1A38] active:scale-95 backdrop-blur-md transition-all duration-200 cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <Icon name="Download" size={15} className="text-white shrink-0" />
@@ -296,8 +296,8 @@ export function Navbar() {
                       href={item.href}
                       onClick={() => handleNavClick(item.href)}
                       className={`flex items-center justify-between px-4 py-3 rounded-xl text-[15px] font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${isCurrent
-                          ? 'bg-blue-600/20 text-sky-400 border border-blue-500/35 font-semibold'
-                          : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                        ? 'bg-blue-600/20 text-sky-400 border border-blue-500/35 font-semibold'
+                        : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
                         }`}
                     >
                       <span>{item.label}</span>
@@ -315,7 +315,7 @@ export function Navbar() {
                   download={cvDownloadConfig.downloadFileName || 'CV-Simon-Ocampo.pdf'}
                   target={cvDownloadConfig.target}
                   rel="noopener noreferrer"
-                  aria-label="Descargar currículum vitae de Simón Ocampo en formato PDF"
+                  aria-label="Descargar currículum vitae de Simon Ocampo en formato PDF"
                   className="w-full flex items-center justify-center gap-2.5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-[0_0_15px_rgba(37,99,235,0.3)] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
                 >
                   <Icon name="Download" size={16} />

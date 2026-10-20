@@ -8,7 +8,7 @@ export function HeroVisual({ imageSrc = defaultProfileImage }) {
       <div className="relative aspect-[4/5] w-full rounded-[28px] sm:rounded-[32px] border border-white/10 bg-[#0B1224]/60 backdrop-blur-sm overflow-hidden shadow-2xl shadow-black/60">
         <img
           src={imageSrc}
-          alt="Fotografía profesional de Simón Ocampo, Desarrollador de Software"
+          alt="Fotografía profesional de Simon Ocampo, Desarrollador de Software"
           className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-[1.02]"
           loading="eager"
         />

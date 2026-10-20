@@ -10,7 +10,7 @@ export function Footer() {
             SO
           </div>
           <span className="font-semibold text-white tracking-tight text-sm">
-            Simón Ocampo
+            Simon Ocampo
           </span>
         </div>
 
@@ -33,7 +33,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto mt-5 pt-5 border-t border-white/5 text-center text-xs text-slate-500">
-        &copy; {new Date().getFullYear()} Simón Ocampo. Todos los derechos reservados.
+        &copy; {new Date().getFullYear()} Simon Ocampo. Todos los derechos reservados.
       </div>
     </footer>
   )
