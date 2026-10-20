@@ -249,7 +249,10 @@ export function Navbar() {
         <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
           <a
             href={cvDownloadConfig.href}
+            download={cvDownloadConfig.downloadFileName || 'CV-Simon-Ocampo.pdf'}
             target={cvDownloadConfig.target}
+            rel="noopener noreferrer"
+            aria-label="Descargar currículum vitae de Simón Ocampo en formato PDF"
             className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0B132B]/85 border-[1.5px] border-[#38BDF8]/60 text-white text-xs sm:text-sm font-semibold tracking-normal shadow-[0_0_14px_rgba(56,189,248,0.25)] hover:border-[#38BDF8] hover:shadow-[0_0_20px_rgba(56,189,248,0.45)] hover:bg-[#0E1A38] active:scale-95 backdrop-blur-md transition-all duration-200 cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <Icon name="Download" size={15} className="text-white shrink-0" />
@@ -309,7 +312,10 @@ export function Navbar() {
               <div className="pt-4 border-t border-slate-800/80 flex flex-col gap-4">
                 <a
                   href={cvDownloadConfig.href}
+                  download={cvDownloadConfig.downloadFileName || 'CV-Simon-Ocampo.pdf'}
                   target={cvDownloadConfig.target}
+                  rel="noopener noreferrer"
+                  aria-label="Descargar currículum vitae de Simón Ocampo en formato PDF"
                   className="w-full flex items-center justify-center gap-2.5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-[0_0_15px_rgba(37,99,235,0.3)] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
                 >
                   <Icon name="Download" size={16} />

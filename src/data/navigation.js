@@ -9,6 +9,7 @@ export const navigationLinks = [
 export const cvDownloadConfig = {
   label: 'Descargar CV',
   href: '/cv-simon-ocampo.pdf',
+  downloadFileName: 'CV-Simon-Ocampo.pdf',
   target: '_blank',
 }
 
