@@ -50,7 +50,7 @@ export function ContactSection() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
               <a
                 href={`mailto:${contactData.email}`}
-                aria-label={`Enviar correo a Simón Ocampo (${contactData.email})`}
+                aria-label={`Enviar correo a Simon Ocampo (${contactData.email})`}
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm sm:text-[15px] shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070D1A]"
               >
                 <Mail className="w-4 h-4 text-white shrink-0" aria-hidden="true" />
@@ -62,7 +62,7 @@ export function ContactSection() {
                 href={contactData.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Conectar con Simón Ocampo en LinkedIn (se abre en nueva pestaña)"
+                aria-label="Conectar con Simon Ocampo en LinkedIn (se abre en nueva pestaña)"
                 className="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 rounded-xl bg-slate-900/40 hover:bg-slate-800/60 border border-slate-700/80 hover:border-slate-500 text-slate-200 hover:text-white font-medium text-sm sm:text-[15px] active:scale-[0.98] transition-all duration-200 select-none cursor-pointer backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#070D1A]"
               >
                 <Icon name="Linkedin" size={17} className="text-slate-300 shrink-0" aria-hidden="true" />

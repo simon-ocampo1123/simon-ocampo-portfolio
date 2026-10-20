@@ -1,4 +1,4 @@
-# Portafolio Personal - Simón Ocampo
+# Portafolio Personal - Simon Ocampo
 
 Portafolio profesional desarrollado con **React**, **Vite**, **Tailwind CSS 4**, **Atomic Design** y preparado para animaciones con **Motion**.
 

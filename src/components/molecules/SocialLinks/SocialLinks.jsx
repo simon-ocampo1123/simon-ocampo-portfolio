@@ -6,8 +6,8 @@ export function SocialLinks({ links = [], className = '' }) {
       {links.map((link) => {
         const isEmail = link.name.toLowerCase() === 'email'
         const label = isEmail
-          ? 'Enviar correo electrónico a Simón Ocampo'
-          : `Visitar perfil de Simón Ocampo en ${link.name} (se abre en nueva pestaña)`
+          ? 'Enviar correo electrónico a Simon Ocampo'
+          : `Visitar perfil de Simon Ocampo en ${link.name} (se abre en nueva pestaña)`
 
         return (
           <a

@@ -20,7 +20,7 @@ export const projectsData = [
     ],
     liveUrl: null,
     repositoryUrl: null,
-    availability: 'En producción',
+    availability: 'Portal Colsubsidio',
     contribution:
       'Ajustes de contraste, navegación por teclado, roles semánticos y corrección de incidencias WCAG 2.1 AA.',
   },
